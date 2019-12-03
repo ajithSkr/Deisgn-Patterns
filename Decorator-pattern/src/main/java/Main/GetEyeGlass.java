@@ -127,25 +127,25 @@ public class GetEyeGlass {
         Scanner in = new Scanner(System.in);
         int option = in.nextInt();
         List<String> frameData = new LinkedList<String>();
-        switch (option) {
-            case 1:
-                frameBrand = new RayBanGlass(frameShape(), frameColor(), frameType());
-                break;
-            case 2:
-                frameBrand = new AviatorGlass(frameShape(), frameColor(), frameType());
-                break;
-            case 3:
-                frameBrand = new FastrackGlass(frameShape(), frameColor(), frameType());
-                break;
-            default:
-                System.out.println("Invalid option");
-                break;
-        }
+            switch (option) {
+                case 1:
+                    frameBrand = new RayBanGlass(frameShape(), frameColor(), frameType());
+                    break;
+                case 2:
+                    frameBrand = new AviatorGlass(frameShape(), frameColor(), frameType());
+                    break;
+                case 3:
+                    frameBrand = new FastrackGlass(frameShape(), frameColor(), frameType());
+                    break;
+                default:
+                    System.out.println("Please select the option above");
+                    break;
+            }
         System.out.println("\n");
-        System.out.println("--Order Summary--"+"\n");
-        frameData.add(frameBrand.glassShape());
-        frameData.add("Frame Price: " + frameBrand.glassPrice().toString()+"\n");
-        return frameData;
+        System.out.println("--Order Summary--" + "\n");
+            frameData.add(frameBrand.glassShape());
+            frameData.add("Frame Price: " + frameBrand.glassPrice().toString() + "\n");
+            return frameData;
 
     }
 
